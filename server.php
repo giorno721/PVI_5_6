@@ -13,7 +13,6 @@ function editStudent($id,$group, $firstName, $lastName, $gender, $birthday, $sta
     $stmt->execute();
 }
 
-
 header('Content-Type: application/json');
 
 function validateName($name) {
