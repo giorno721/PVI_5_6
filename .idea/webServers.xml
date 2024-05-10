@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1ca05cb0-7532-4801-8775-e5499969da5a" name="Xammp" url="http://localhost/PVI">
+        <fileTransfer mountedRoot="C:\xampp\htdocs\PVI" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>

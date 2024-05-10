@@ -1,0 +1,45 @@
+.open { display: flex !important;
+    position: absolute; z-index: 100 }
+.burger-menu{
+    display: none;
+}
+.bi-list{
+    font-size: 20px;
+}
+.bi-x{
+    font-size: 22px;
+}
+@media (max-width: 768px) {
+    .burger-menu{
+        display: initial;
+    }
+    .sidebar {
+        display: none;
+        height: 100%;
+        width: 40%; /* Adjust the width as needed */
+        background-color: #333; /* Background color */
+        color: #fff; /* Text color */
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 20px; /* Padding inside the sidebar */
+    }
+
+    .sidebar ul {
+        list-style: none; /* Remove default list styles */
+        padding: 0;
+    }
+
+    .sidebar ul li {
+        margin-bottom: 10px; /* Spacing between list items */
+    }
+
+    .sidebar ul li a {
+        color: #fff; /* Link text color */
+        text-decoration: none; /* Remove underline */
+    }
+
+    .sidebar ul li a:hover {
+        text-decoration: underline; /* Underline on hover */
+    }
+
+}

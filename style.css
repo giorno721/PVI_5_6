@@ -1,0 +1,423 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+.navbar {
+    background-color: #99afff;
+    display: flex;
+    height: 60px;}
+.logo{
+    position: absolute;
+    transition: 0.3s;
+    left: 50%;
+    transform: translateY(-10%);
+    font-size: 35px;
+    letter-spacing: 10px;
+}
+.logo:hover {
+    transform: scale(1.2); /* Масштабування при наведенні */
+}
+.navBarButton {
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.navBarButton:hover{
+    background-color: rgb(105, 105, 105);
+}
+.img-profile{
+    width: 30px;
+    float: left;
+}
+.right {
+    margin-left: auto;
+    display: flex;
+    padding: 4px;
+}
+.CMSLogo{
+    color: black;
+    float: left;
+    text-decoration: none;
+    font-weight: bold;
+}
+.CMSLogo:hover{
+    color:black;
+    text-decoration: none; /* Видалення підкреслення */
+}
+.bi-bell::before{
+    font-size: 30px;
+    color: black;
+}
+#NameLabel
+{
+    font-size: 22px;
+    align-self: center;
+    font-weight: bold;
+}
+
+#profileDropDownMenu{
+    display: none;
+    top: 85%;
+    position: absolute;
+    width: 100%; /* Adjust width as needed */
+    background-color: #fff; /* Background color */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Style for each profile item */
+#profileDropDownMenu ul li {
+    list-style: none;
+    padding: 2px;
+    border-bottom: 1px solid #eee; /* Separator between items */
+}
+#profileDropDownMenu ol, ul {
+    padding-left: 1em;
+}
+/* Style for profile button */
+#profileDropDownMenu ul li button {
+    background: none;
+    border: 1px solid #ccc; /* Border for button */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer;
+    font-size: 17px; /* Adjust font size */
+    color: #333; /* Text color */
+    padding: 8px; /* Add padding to separate text from border */
+}
+
+/* Style for profile button on hover */
+#profileDropDownMenu ul li button:hover {
+    background-color: #f5f5f5; /* Background color on hover */
+}
+
+/* Show the dropdown menu when hovering over the profile icon */
+.profile:hover #profileDropDownMenu {
+    display: block;
+}
+
+/* Notification dropdown menu container */
+#NotificationDropDownMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px; /* Adjust width as needed */
+    background-color: #fff; /* Background color */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Style for each notification item */
+#NotificationDropDownMenu ul li {
+    list-style: none;
+    padding: 5px;
+    border-bottom: 1px solid #eee; /* Separator between items */
+}
+
+/* Style for notification image */
+.img-notif {
+    width: 40px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: inline-block;
+    margin-right: 10px; /* Spacing between image and text */
+}
+
+/* Style for notification text */
+#NotificationDropDownMenu ul li button {
+    background: none;
+    border: 1px solid #ccc; /* Border for text */
+    border-radius: 5px; /* Rounded corners for text */
+    cursor: pointer;
+    font-size: 14px; /* Adjust font size */
+    color: #333; /* Text color */
+    margin-top: 5px;
+    padding: 8px; /* Add padding to separate text from border */
+}
+
+/* Style for notification text on hover */
+#NotificationDropDownMenu ul li button:hover {
+    background-color: #f5f5f5; /* Background color on hover */
+}
+/* Show the dropdown menu when hovering over the notification icon */
+.notification:hover #NotificationDropDownMenu {
+    display: block;
+}
+
+.header-students{
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 35px;
+    letter-spacing: 3px;
+}
+.sidebar{
+    width: 15%;
+    float: left;
+    margin-top: 25px;
+    margin-left: 30px;
+    font-size: 25px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+.nav-link{
+    color: black;
+    font-size: 25px;
+}
+table {
+    caption-side: top;
+}
+.table-container{
+    overflow: auto;
+    width: 80%
+}
+.content-table{
+    font-size: 20px;
+    width: 100%;
+    border-radius: 5px 5px 5px 5px;
+    overflow: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-collapse: collapse;
+}
+.content-table caption {
+    display: table-caption;
+    text-align: right;
+}
+.content-table thead tr {
+    background-color: #aabbfa;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+.content-table th,
+.content-table td {
+    padding: 15px 15px;
+    text-align: center;
+    white-space: nowrap;
+    /*border: 1px solid gray;*/
+}
+.no-styles{
+    background-color: white;
+}
+.content-table tbody tr {
+    border-bottom: 2px solid #dddddd;
+}
+.notification-icon {
+    position: relative;
+    top: 5px;
+}
+.Icon {
+    transition: color 0.3s; /* Додаємо плавний перехід для зміни кольору */
+}
+
+.Icon:hover {
+    color: blue; /* Змінюємо колір насичення при наведенні курсору */
+}
+
+.bi-circle-fill {
+    font-size: 30px;
+    position: absolute;
+}
+.bi-circle-not-fill{
+    font-size: 30px;
+    color: #00a82d;
+    position: absolute;
+}
+#icon-active{
+    position: inherit;
+    color: #00a82d;
+
+}
+#icon{
+    position: inherit;
+    color: #cccccc;
+}
+.notification {
+    position: relative;
+}
+.navigationRedDot{
+    top:0;
+    right: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    animation: pulse 1.2s infinite alternate;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.bi-circle{
+    font-size: 30px;
+    color: inherit
+}
+.bi-pencil-square{
+    font-size: 30px;
+    color: inherit;
+}
+.bi-x-square{
+    font-size: 30px;
+    color: inherit;
+}
+.bi-plus-square{
+    font-size: 30px;
+    display: block; /* Встановлюємо блочний вигляд для елемента */
+    float: right; /* Розміщуємо елемент справа */
+    margin-right: 3%;
+}
+.no-decoration {
+    text-decoration: none;
+    color: inherit; /* Use the same color as the parent element */
+}
+
+/* Define link styles for different states */
+.no-decoration:hover {
+    color: inherit; /* Keep the same color on hover */
+}
+
+.no-decoration:active {
+    color: inherit; /* Keep the same color when active (clicked) */
+}
+.open { display: flex !important;
+    position: absolute; z-index: 100 }
+.burger-menu{
+    display: none;
+}
+
+.bi-list{
+    font-size: 28px;
+}
+.bi-x{
+    font-size: 30px;
+}
+
+.page-link{
+    font-size: 20px;
+}
+.close{
+    position: absolute;
+    width: 8%;
+    height: 40px;
+    font-size: 25px;
+    border-radius: 10px;
+    right: 20px;
+}
+.form-group{
+    margin: 15px;
+}
+.alert-msg{
+    color: red;
+    display: none;
+}
+.alert-message-visible {
+    display: initial;
+}
+
+.alert-message-hidden {
+    display: none;
+}
+@media screen and (max-width: 1200px) {
+    .table-container{
+        width: 90%;
+        margin-left: 20px;
+    }
+    .header-students{
+        margin-left: 20px;
+    }
+    .sidebar{
+        display: none;
+    }
+    .bi-plus-square{
+        margin-right: 8%;
+    }
+}
+
+@media (min-width: 768px) {
+    .LargeScreenMenu{
+        display: block;
+    }
+    .HamburgerMenu{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .LargeScreenMenu{
+        display: none;
+    }
+    .header-students{
+        margin-left: 20px;
+    }
+    .HamburgerMenu{
+        display: flex;
+    }
+    #NameLabel{
+        display: none;
+    }
+    .table-container{
+        width: 90%;
+        margin-left: 20px;
+    }
+    .logo{
+        left: 40%;
+    }
+    #profileDropDownMenu{
+        right: 5px;
+        width: 120px;
+    }
+    .notification:hover #NotificationDropDownMenu {
+        display: none;
+    }
+
+    .burger-menu{
+        display: initial;
+    }
+    .sidebar {
+        display: none;
+        height: 100%;
+        margin-left: 0;
+        margin-top: 0;
+        width: 50%; /* Adjust the width as needed */
+        background-color:white; /* Background color */
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        border: 1px solid black;
+        padding: 20px; /* Padding inside the sidebar */
+    }
+
+    .sidebar ul {
+        list-style: none; /* Remove default list styles */
+        padding: 0;
+    }
+
+    .sidebar ul li {
+        margin-bottom: 10px; /* Spacing between list items */
+    }
+
+    .sidebar ul li a {
+        color: black; /* Link text color */
+        text-decoration: none; /* Remove underline */
+    }
+
+    .sidebar ul li a:hover {
+        text-decoration: underline; /* Underline on hover */
+    }
+
+    .logo:hover {
+        transform: none;
+    }
+    .logo {
+        transform: none;
+    }
+
+}
