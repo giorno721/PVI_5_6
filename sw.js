@@ -5,7 +5,7 @@ self.addEventListener('install', (event) => {
             .then((cache) => {
                 return cache.addAll([
                     '/',
-                    '/index.html',
+                    '/index.php',
                     '/style.css',
                     '/app.js'
                 ]);
@@ -25,7 +25,7 @@ self.addEventListener('fetch', (event) => {
                     .then((response) => {
                         return caches.open('my-pwa-cache')
                             .then((cache) => {
-                                cache.put(event.request, response.clone());
+                                //cache.put(event.request, response.clone());
                                 return response;
                             });
                     });
