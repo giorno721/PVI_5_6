@@ -19,7 +19,7 @@
     <div class="right">
         <div class="notification navBarButton">
             <div>
-                <a href="Messages.html"><i class="bi bi-bell" ></i></a>
+                <a href="message.php"><i class="bi bi-bell" ></i></a>
             </div>
             <div class="navigationRedDot"></div>
             <div id="NotificationDropDownMenu">

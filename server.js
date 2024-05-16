@@ -12,31 +12,36 @@ io.on('connection', (socket) => {
         updateUsers();
     });
 
-    socket.on('send message', (data, info) => {
-        if (info === "all") {
-            io.sockets.emit('new message', { msg: data, user: socket.username, chat: info });
+    socket.on('send private message', (data, info) => {
 
-            updateUsers();
-            return;
-        }
+        socket.emit('new message', { msg: data, user: socket.username, chat: info });
+        io.to(info).emit('new message', { msg: data, user: socket.username, chat: socket.id});
+    });
 
-        socket.emit('new message', { msg: data, user: socket.username, chat: info }); //собі
-        io.to(info).emit('new message', { msg: data, user: socket.username, chat: socket.username});
-
-        updateUsers();
+    socket.on("send global message", (data, info) => {
+        io.sockets.emit('new message', { msg: data, user: socket.username, chat: info });
     });
 
     socket.on("new user", (data) => {
         socket.username = data;
+
+        io.sockets.emit('new user', { username: socket.username, id: socket.id});
+
         socket.join(data);
-        updateUsers();
+
+        const users = [];
+        for (const socket of io.sockets.sockets.values()) {
+            users.push({ username: socket.username, id: socket.id});
+        }
+        socket.emit('get user', users);
+
     });
 });
 
 function updateUsers() {
     const users = [];
     for (const socket of io.sockets.sockets.values()) {
-        users.push({ username: socket.username});
+        users.push({ username: socket.username, id: socket.id});
     }
     io.sockets.emit('get user', users);
 }
