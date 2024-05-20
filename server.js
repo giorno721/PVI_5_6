@@ -1,3 +1,15 @@
+const mongoose = require('mongoose');
+
+// Підключення до MongoDB
+mongoose.connect('mongodb://localhost:27017/chatDb', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(() => {
+    console.log("Підключено до MongoDB");
+}).catch((err) => {
+    console.error("Помилка підключення до MongoDB:", err);
+});
+
 const io = require('socket.io')(3000, {
     cors: {
         origin: "http://localhost",
