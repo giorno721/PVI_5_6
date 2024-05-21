@@ -67,33 +67,32 @@
             <div class="form-group">
                 <h4>Enter your name:</h4>
                 <input id="username" autocomplete="off" />
-                <button type="submit"><span class="material-symbols-outlined">
-chat
-</span></button>
+                <button type="submit"><span class="material-symbols-outlined">chat</span></button>
             </div>
         </form>
     </div>
     <div class="chat-body">
         <div id="chatArea">
             <div class="online-users" id="online-users-div">
-            <h3>Chat room</h3>
-                <div class="user-list-el" id="1">all</div>
+                <h3>Online Users</h3>
+                <div class="user-list-el" id="global-chat">All</div>
                 <ul id="users"></ul>
             </div>
             <div class="chat-window">
-                <h3 id="chatInfo">Chat room: all</h3>
+                <h3 id="chatInfo">Chat: all</h3>
                 <div class="chat" id="chat"></div>
                 <form id="messageForm">
                     <div class="form-group">
-                        <label for="message"></label>
+                        <label for="message">Enter message:</label>
                         <input type="text" id="message" autocomplete="off" />
-                        <button type="submit"><i class="bi bi-send"></i></button>
+                        <button type="submit">Send</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
 
 </body>
 
